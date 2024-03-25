@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Simple HTML</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <div
+      class="h-20 w-full bg-[#2F398E] flex items-center border-b-solid border-b-2 border-[#909090] justify-between px-5 pb-1"
+    >
+      <img src="/assets/logoweb-02.png" class="h-full" />
+      <p class="text-2xl text-white font-bold">Registration</p>
+    </div>
+    <div class="flex items-center justify-center">
+      <div class="w-1/2">
+        <form action="" method="post">
+          <p class="text-4xl font-bold text-center mb-4">Course Registration</p>
+          <div class="flex flex-col w-full p-[10px] rounded-[5px]">
+            <label for="name" class="mb-2">Full Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="border border-gray-400 p-2 mb-4"
+            />
+          </div>
+          <div class="flex flex-col w-full p-[10px] rounded-[5px]">
+            <label for="id" class="mb-2">ID:</label>
+            <input
+              type="text"
+              id="id"
+              name="id"
+              class="border border-gray-400 p-2 mb-4"
+            />
+          </div>
+          <div class="flex flex-col w-full p-[10px] rounded-[5px]">
+            <label for="email" class="mb-2">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="border border-gray-400 p-2 mb-4"
+            />
+          </div>
+          <div class="flex items-center w-full p-[10px] rounded-[5px]">
+            <label for="gender" class="mb-2 mr-4">Gender:</label>
+            <div class="flex items-center justify-evenly w-full">
+              <input type="radio" id="male" name="gender" class="mr-1" />
+              <span class="font-[18px]">Male</span>
+              <input type="radio" id="female" name="gender" class="mr-1" />
+              <span class="font-[18px]">Female</span>
+            </div>
+          </div>
+          <div class="flex flex-col w-full p-[10px] rounded-[5px]">
+            <label for="major" class="mb-2">Field of study:</label>
+            <select class="w-full p-[10px] rounded-[5px]" id="major">
+              <option disabled selected>--Select Major--</option>
+              <option>Computer Science</option>
+              <option>Information Technology</option>
+              <option>Data Science</option>
+            </select>
+          </div>
+          <div class="" id="courses"></div>
+          <div class="w-full flex items-center justify-center">
+            <button
+              type="submit"
+              class="bg-blue-500 hover:bg-blue-700 w-[70%] font-bold py-2 px-4 rounded mt-4 mb-4 text-white"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="w-1/2">
+        <div id="detail"></div>
+      </div>
+    </div>
+    <script>
+      const major = document.querySelector("#major");
+      const courses = document.querySelector("#courses");
+      const detail = document.querySelector("#detail");
+      const coursesList = {
+        "Computer Science": [
+          "Operating Systems",
+          "Data Structures & Algorithms",
+          "Object Oriented Programming",
+          "Principles of Database Management",
+          "Artificial Intelligence",
+        ],
+        "Information Technology": [
+          "Computer Networks",
+          "Information Systems Management",
+          "Net-Centric Programming",
+          "Scalable and Distributed Systems",
+          "Web Application Development",
+        ],
+        "Data Science": [
+          "Data Mining",
+          "Machine Learning Platforms",
+          "Big Data Analytics",
+          "Probability, Statistics, and Random Process",
+          "Theoretical Models in Computing",
+        ],
+      };
+      major.addEventListener("change", (e) => {
+        courses.innerHTML = "";
+        coursesList[e.target.value].forEach((course) => {
+          courses.innerHTML += `
+          <div class="flex items-center w-full p-[10px] rounded-[5px]">
+        <input type="checkbox" name="courses" value="${course}" onchange="showDetail('${course}')">
+        <label class="mb-2 ml-4">${course}</label>
+      </div>
+        `;
+        });
+      });
+      function showDetail(courseName) {
+        function getSelectedMajor() {
+          return major.value; // Assuming major is a select element
+    }
+        fetch("detail.json")
+          .then((res) => res.json())
+          .then((data) => {
+            const selectedCourse = data.majors[getSelectedMajor()].courses.find(course => course.name === courseName);
+            detail.innerHTML = `
+      <div class="w-full h-full"> 
+        <div>
+          <img src="${selectedCourse.image}" class="w-[200px] h-[200px] rounded-full">
+        </div>
+        <p class="text-2xl font-bold text-center">${selectedCourse.name}</p>
+        <p class="">Instructor: ${selectedCourse.instructor}</p>
+        <p class="">Description:</p>s
+        <p class="">${selectedCourse.description}</p>
+      </div>
+    `;
+          });
+      }
+    </script>
+  </body>
+</html>
