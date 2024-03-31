@@ -1,0 +1,222 @@
+[
+  {
+    "id": "breaking",
+    "label": "Thời sự",
+    "content": [
+      {
+        "thumbnail": "https://i1-english.vnecdn.net/2024/03/31/1-jpeg-1711893731-5966-1711893908.jpg?w=680&h=408&q=100&dpr=1&fit=crop&s=jA5VauHIZP2ag3oU8F_4-Q",
+        "tag": "Breaking news",
+        "title": "Urban residents upset by dog and cat owners",
+        "description": "For two months, Ngo Binh, 55, has been tense with his neighbor because he cannot stand the stench carried around by the pack of stray cats she harbors.",
+        "source": "https://e.vnexpress.net/news/trend/urban-residents-upset-by-dog-and-cat-owners-4728751.html"
+      },
+      {
+        "thumbnail": "https://i1-english.vnecdn.net/2024/03/31/img3314-1711862268153122344053-2563-4050-1711887932.jpg?w=680&h=0&q=100&dpr=1&fit=crop&s=L1LXAbpdd0zYMIuiRVEJOw",
+        "tag": "Breaking news",
+        "title": "PM advocates for Phu Quoc island to become global tourism destination",
+        "description": "Prime Minister Pham Minh Chinh has called for the swift and sustainable advancement of Phu Quoc Island to transform it into a premier tourism destination, recognized both in Vietnam and worldwide.",
+        "source": "https://e.vnexpress.net/news/news/pm-advocates-for-phu-quoc-island-to-become-global-tourism-destination-4728816.html"
+      }
+    ]
+  },
+  {
+    "id": "world",
+    "label": "Thế giới",
+    "content": [
+      {
+        "thumbnail": "https://i1-english.vnecdn.net/2024/03/31/336c8rb-highres-1711847177-1802-1711847345.jpg?w=680&h=0&q=100&dpr=1&fit=crop&s=LhIW1_xwspW-LRLmI43CBA",
+        "tag": "World news",
+        "title": "Bulgaria, Romania take first steps into Europe's visa-free zone",
+        "description": "Bulgaria and Romania joined Europe's vast Schengen area of free movement on Sunday, opening up travel by air and sea without border checks after a 13-year wait.",
+        "source": "https://e.vnexpress.net/news/world/bulgaria-romania-take-first-steps-into-europe-s-visa-free-zone-4728651.html"
+      },
+      {
+        "thumbnail": "https://i1-english.vnecdn.net/2024/03/30/2024-02-09t051613z-372912161-r-3225-7986-1711764230.jpg?w=680&h=0&q=100&dpr=1&fit=crop&s=Pp6AbYQU3ZgVj_BV57CyNg",
+        "tag": "World news",
+        "title": "OpenAI unveils voice-cloning tool",
+        "description": "OpenAI on Friday revealed a voice-cloning tool it plans to keep tightly controlled until safeguards are in place to thwart audio fakes meant to dupe listeners.",
+        "source": "https://e.vnexpress.net/news/world/openai-unveils-voice-cloning-tool-4728423.html"
+      }
+    ]
+  },
+  {
+    "id": "lifestyle",
+    "label": "Đời sống",
+    "content": [
+      {
+        "thumbnail": "https://i1-english.vnecdn.net/2024/03/29/ha1-jpeg-3175-1711509000-17116-2061-6867-1711676230.jpg?w=680&h=0&q=100&dpr=1&fit=crop&s=b-_g8oqESdW4qeqd-MZZvw",
+        "tag": "Lifestyle news",
+        "title": "Healthy diet, exercise help woman shed 25 kg excess fat within 9 months",
+        "description": "Faced with challenges such as uncontrolled eating habits which led to a weakened physical state, Le Nu Hoang Anh turned to clean eating and exercise as solutions to lose weight and enhance her health.",
+        "source": "https://e.vnexpress.net/news/life/wellness/healthy-diet-exercise-help-woman-shed-25-kg-excess-fat-within-9-months-4727978.html"
+      },
+      {
+        "thumbnail": "https://i1-english.vnecdn.net/2024/03/25/D-fK4a-XYAE-37f-9557-1711362662.jpg?w=680&h=0&q=100&dpr=1&fit=crop&s=EITwmdJBYA4yXUeUyUOC8w",
+        "tag": "Lifestyle news",
+        "title": "British Airways flight attendants fired for mocking Chinese passengers",
+        "description": "British Airways has dismissed two of its flight attendants for attempting to mimic a Chinese accent and making slant-eyed gestures, actions that are considered racially insensitive toward Chinese passengers.",
+        "source": "https://e.vnexpress.net/news/trend/british-airways-flight-attendants-fired-for-mocking-chinese-passengers-4726485.html"
+      }
+    ]
+  },
+  {
+    "id": "health",
+    "label": "Sức khoẻ",
+    "content": [
+      {
+        "thumbnail": "https://i1-english.vnecdn.net/2024/03/21/pexels-makafood-8980416-171095-7547-5899-1710955111.jpg?w=680&h=0&q=100&dpr=1&fit=crop&s=BSZqAG3febx9py6CycxdTA",
+        "tag": "Health news",
+        "title": "Is there a risk of parasites from consuming raw salmon?",
+        "description": "The concern about the potential for contracting tapeworms from eating raw salmon is widespread. Is this concern valid? (Thuy, 33, Hanoi)",
+        "source": "https://e.vnexpress.net/news/life/wellness/is-there-a-risk-of-parasites-from-consuming-raw-salmon-4724721.html"
+      },
+      {
+        "thumbnail": "https://i1-english.vnecdn.net/2024/03/09/chad-madden-p-7tth69twy-unspla-4588-6261-1709934838.jpg?w=680&h=0&q=100&dpr=1&fit=crop&s=2ubQABUTlqMtJur--6G-xA",
+        "tag": "Health news",
+        "title": "Is it safe to consume tea and coffee simultaneously?",
+        "description": "I habitually enjoy tea and coffee together every morning. Is there an impact on my health from consuming both of these beverages at the same time? (Hung, 28, Dong Nai)",
+        "source": "https://e.vnexpress.net/news/life/wellness/is-it-safe-to-consume-tea-and-coffee-simultaneously-4720219.html"
+      }
+    ]
+  },
+  {
+    "id": "youth",
+    "label": "Giới trẻ",
+    "content": [
+      {
+        "thumbnail": "https://i1-english.vnecdn.net/2024/03/28/322748665-909798743721594-7605-1928-6784-1711600818.jpg?w=680&h=0&q=100&dpr=1&fit=crop&s=KnmSGm-tcTSgtOrvCh8OUg",
+        "tag": "Youth news",
+        "title": "Malaysian actor Ronny Chieng calls Singapore 'country of small island Karens'",
+        "description": "Actor-comedian Ronny Chieng, celebrated for his performances in Hollywood hits including “Crazy Rich Asians,” described Singapore as “a country of small island Karens with main character syndrome” through a story on his Instagram.",
+        "source": "https://e.vnexpress.net/news/trend/malaysian-actor-ronny-chieng-calls-singapore-country-of-small-island-karens-4727662.html"
+      },
+      {
+        "thumbnail": "https://i1-english.vnecdn.net/2024/03/23/1234-4767-1711150802-6842-1711156335.png?w=680&h=0&q=100&dpr=2&fit=crop&s=JiHHAuFYtUVTy1DeoIUSSg",
+        "tag": "Youth news",
+        "title": "Kate, Princess of Wales, says she has cancer",
+        "description": "Kate, Britain's Princess of Wales, said on Friday she was undergoing preventative chemotherapy after tests taken after she had major abdominal surgery in January revealed that cancer had been present.",
+        "source": "https://e.vnexpress.net/news/celebrities/kate-princess-of-wales-says-she-has-cancer-4725677.html"
+      }
+    ]
+  },
+  {
+    "id": "education",
+    "label": "Giáo dục",
+    "content": [
+      {
+        "thumbnail": "https://i1-english.vnecdn.net/2024/03/30/8c1ffc8d370249c392446aeead2276-9244-3180-1711797199.jpg?w=680&h=408&q=100&dpr=1&fit=crop&s=wvcsgbATfgJVAeuiQNnmoA",
+        "tag": "Education news",
+        "title": "American International School Vietnam seeks $5M to keep running",
+        "description": "The head of the American International School Vietnam (AISVN) in Ho Chi Minh City has asked parents to pay VND125 billion (US$5 million) to help it remain open.",
+        "source": "https://e.vnexpress.net/news/education/aisvn-calls-for-extra-5m-to-keep-school-running-plans-equitization-4728572.html"
+      },
+      {
+        "thumbnail": "https://i1-english.vnecdn.net/2024/03/30/AP24088453489593-6622-1711777475.jpg?w=680&h=0&q=100&dpr=2&fit=crop&s=TnSQ1Z9c0J1B31ndFTe5RQ",
+        "tag": "Education news",
+        "title": "4 Canadian school boards sue Snapchat, TikTok and Meta for disrupting students' education",
+        "description": "Four of the largest school boards in the Canadian province of Ontario said Thursday they launched lawsuits against TikTok, Meta and SnapChat alleging the social media platforms are disrupting student learning.",
+        "source": "https://e.vnexpress.net/news/news/education/4-canadian-school-boards-sue-snapchat-tiktok-and-meta-for-disrupting-students-education-4728504.html"
+      }
+    ]
+  },
+  {
+    "id": "traveling",
+    "label": "Du lịch",
+    "content": [
+      {
+        "thumbnail": "https://i1-dulich.vnecdn.net/2023/05/25/hinh11-1685001964-6102-1685002176.jpg?w=1200&h=0&q=100&dpr=2&fit=crop&s=HHb4vOCCB_AQQpZIfJMVUw",
+        "tag": "Traveling news",
+        "title": "Travel guide to Ho Chi Minh City",
+        "description": "Ho Chi Minh City, known for its vibrant blend of cultures, is a bustling metropolis that never sleeps, offering exciting entertainment day and night.",
+        "source": "https://i1-dulich.vnecdn.net/2023/05/25/hinh11-1685001964-6102-1685002176.jpg?w=1200&h=0&q=100&dpr=2&fit=crop&s=HHb4vOCCB_AQQpZIfJMVUw"
+      },
+      {
+        "thumbnail": "https://i1-english.vnecdn.net/2024/03/28/0111681700263-1711621215-5982-1711621228.jpg?w=680&h=408&q=100&dpr=1&fit=crop&s=MLiv9INRgF_tdGJcG2s_xA",
+        "tag": "Traveling news",
+        "title": "Just $60: Hoi An becomes world's cheapest destination for Britons",
+        "description": "The ancient city of Hoi An has been named the world's cheapest long-haul destination for British tourists for the first time, surpassing Indonesia's Bali, according to a new report.",
+        "source": "https://e.vnexpress.net/news/places/just-60-hoi-an-becomes-worlds-cheapest-destination-for-britons-4727835.html"
+      }
+    ]
+  },
+  {
+    "id": "culture",
+    "label": "Văn hoá",
+    "content": [
+      {
+        "thumbnail": "https://i1-giadinh.vnecdn.net/2024/03/29/im-941097-1-8935-1711686183.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=Zt2ijjj4pQE7veSoA7DyRA",
+        "tag": "Culture news",
+        "title": "Why Do Many Americans Quit High-Paying Jobs?",
+        "description": "Almaguer, living in New York, quit his job at a technology company with a salary of $150,000 per year due to exhaustion after working 12-hour days.",
+        "source": "https://vnexpress.net/vi-sao-nhieu-nguoi-my-bo-viec-luong-cao-4728066.html"
+      },
+      {
+        "thumbnail": "https://i1-giadinh.vnecdn.net/2024/03/28/Anh-man-hinh-2024-03-28-luc-16-7598-3067-1711617992.png?w=1020&h=0&q=100&dpr=1&fit=crop&s=v3yWGfRwvQwtZ_zHYgJCfw",
+        "tag": "Culture news",
+        "title": "The girl lives in a house with 6 pieces of furniture",
+        "description": "iao Sang, 34 years old, lives alone in a 88 m2 house in Thach Gia Trang with a dining table, wardrobe, refrigerator, washing machine, vacuum cleaner robot, and bed.",
+        "source": "https://vnexpress.net/co-gai-song-trong-ngoi-nha-voi-6-do-noi-that-4727791.html"
+      }
+    ]
+  },
+  {
+    "id": "entertainment",
+    "label": "Giải trí",
+    "content": [
+      {
+        "thumbnail": "https://i1-english.vnecdn.net/2024/03/28/1-9817-1711595654.jpg?w=680&h=0&q=100&dpr=1&fit=crop&s=u4z_58SW2Pd4VVVlZnZMKA",
+        "tag": "Entertainment news",
+        "title": "'Mai' movie ranks 16th at worldwide box office",
+        "description": "Director Tran Thanh's \"Mai\" movie has grossed $22.1 million globally, making it 16th on the 2024 international revenue rankings, according to Box Office Mojo.",
+        "source": "https://e.vnexpress.net/news/arts/mai-movie-ranks-16th-at-worldwide-box-office-4727592.html"
+      },
+      {
+        "thumbnail": "https://i1-english.vnecdn.net/2024/03/06/352822440-132231416510936-6545-8795-8009-1709717646.jpg?w=680&h=0&q=100&dpr=1&fit=crop&s=iDyyYK8-hM1eQ3tGfivhPg",
+        "tag": "Entertainment news",
+        "title": "VIP experience turns 'awful' at Taylor Swift's Singapore concert",
+        "description": "A TikTok user recounted an “awful” VIP experience at Taylor Swift’s “The Eras Tour” concert in Singapore, marred by overcrowding, after spending S$1,800 (US$1,342) on a ticket.",
+        "source": "https://e.vnexpress.net/news/arts/vip-experience-turns-awful-at-taylor-swifts-singapore-concert-4719220.html"
+      }
+    ]
+  },
+  {
+    "id": "sports",
+    "label": "Thể thao",
+    "content": [
+      {
+        "thumbnail": "https://i1-english.vnecdn.net/2024/03/29/tragia-1711704387-4010-1711704500.jpg?w=680&h=408&q=100&dpr=1&fit=crop&s=g09LS7NARYb95Usm5zlXyw",
+        "tag": "Sports news",
+        "title": "Troussier pays big price for Vietnam's disappointing run: French media",
+        "description": "\"Troussier's experience in international football is as long as a river, with an impressive resume at the age of 69. But he paid the price for Vietnam's disappointing results. The poor performance against Indonesia was the last straw that dismissed him,\" football365 wrote.",
+        "source": "https://e.vnexpress.net/news/football/troussier-pays-big-price-for-vietnams-disappointing-run-french-media-4728268.html"
+      },
+      {
+        "thumbnail": "https://i1-english.vnecdn.net/2024/03/30/nhatbantrieutienvongloai892053-6088-1887-1711806135.jpg?w=680&h=408&q=100&dpr=1&fit=crop&s=HEI0QKgHaZVN5ri6jicjRQ",
+        "tag": "Sports news",
+        "title": "Japan advance in World Cup qualifying with forfeit win over North Korea",
+        "description": "Japan have been declared the winner of their cancelled World Cup qualifying match against North Korea by forfeit, the sport's global governing body told the Japan Football Association on Saturday.",
+        "source": "https://e.vnexpress.net/news/football/japan-advance-in-world-cup-qualifying-with-forfeit-win-over-north-korea-4728586.html"
+      }
+    ]
+  },
+  {
+    "id": "tech",
+    "label": "Công nghệ",
+    "content": [
+      {
+        "thumbnail": "https://i1-english.vnecdn.net/2024/03/31/pexels-pixabay-2166-1711876473-1995-1711876537.jpg?w=680&h=0&q=100&dpr=2&fit=crop&s=TX3xDYEQGPAtmnVOWDTSkQ",
+        "tag": "Technology news",
+        "title": "China's Taobao working with startup on deliveries by reusable rocket",
+        "description": "Chinese rocket maker Space Epoch is working with Alibaba's online shopping platform Taobao to make reusable rockets for express deliveries that could arrive globally in an hour, Space Epoch announced on Sunday.",
+        "source": "https://e.vnexpress.net/news/world/china-s-taobao-working-with-startup-on-deliveries-by-reusable-rocket-4728790.html"
+      },
+      {
+        "thumbnail": "https://i1-english.vnecdn.net/2024/03/28/codes-1711594427-2619-1711594452.jpg?w=680&h=408&q=100&dpr=1&fit=crop&s=kDB1pU68wQQTLb4QTa3yYg",
+        "tag": "Technology news",
+        "title": "US offers $10M bounty for info on 'Blackcat' hackers who hit UnitedHealth",
+        "description": "The U.S. State Department on Wednesday offered up to $10 million for information on the \"Blackcat\" ransomware gang who hit the UnitedHealth Group's tech unit and snarled insurance payments across America.",
+        "source": "https://e.vnexpress.net/news/world/us-offers-10m-bounty-for-info-on-blackcat-hackers-who-hit-unitedhealth-4727570.html"
+      }
+    ]
+  }
+]

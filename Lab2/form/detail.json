@@ -72,6 +72,13 @@
           "instructor": "Dr. Mai Hoang Bao An",
           "description": "This course covers the principles and techniques of scalable and distributed systems. Topics include distributed systems concepts, distributed systems architectures, distributed systems technologies, and distributed systems management. The course will include a number of programming assignments and a term project.",
           "image": "https://t4.ftcdn.net/jpg/05/07/66/23/360_F_507662376_BTKmPlIGBvKlRHWKRNeFt7bj7H2SynQm.jpg"
+        },
+        {
+          "name": "Web Application Development",
+          "code": "IT140IU",
+          "instructor": "Dr. Nguyen Van Sinh",
+          "description": "This course covers the principles and techniques of web application development. Topics include web application architectures, web application technologies, web application programming, and web application security. The course will include a number of programming assignments and a term project.",
+          "image": "https://www.ionos.com/digitalguide/fileadmin/DigitalGuide/Teaser/webentwicklung-t.jpg"
         }
       ]
     },
