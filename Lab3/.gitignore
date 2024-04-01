@@ -1,0 +1,23 @@
+# Maven specific files
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.branch
+release.properties
+maven-metadata-*.xml
+maven-archiver/
+MANIFEST.MF
+
+# IntelliJ IDEA files
+.idea/
+*.iml
+
+# Eclipse files
+.classpath
+.project
+.settings/
+
+# NetBeans files
+nb-configuration.xml
+build/
+nbactions.xml
