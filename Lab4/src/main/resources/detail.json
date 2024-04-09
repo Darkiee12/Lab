@@ -1,0 +1,127 @@
+{
+  "majors": {
+    "Computer Science": {
+      "description": "Computer Science is the study of computers and computational systems. Unlike electrical and computer engineers, computer scientists deal mostly with software and software systems; this includes their theory, design, development, and application.",
+      "code": "CS",
+      "courses": [
+        {
+          "name": "Operating Systems",
+          "code": "IT017IU",
+          "instructor": "Dr. Tran Manh Ha",
+          "description": "This course is an introduction to the design and implementation of operating systems. Topics include processes, threads, CPU scheduling, memory management, file systems, and I/O systems. The course will include a number of programming assignments and a term project.",
+          "image": "https://www.mychoicesoftware.com/cdn/shop/articles/OS-buddies-1-1024x570.jpg?v=1563420956"
+        },
+        {
+          "name": "Data Structures & Algorithms",
+          "code": "IT013IU",
+          "instructor": "Dr. Tran Thanh Tung",
+          "description": "This course covers the design and analysis of fundamental data structures and algorithms. Topics include asymptotic analysis, data structures (arrays, linked lists, stacks, queues, trees, heaps, and graphs), sorting and searching algorithms, and algorithm design techniques (greedy, dynamic programming, divide-and-conquer, and backtracking).",
+          "image": "https://www.codesmith.io/hubfs/Intro%20to%20Graphs.jpeg"
+        },
+        {
+          "name": "Object Oriented Programming",
+          "code": "IT069IU",
+          "instructor": "Dr. Tran Thanh Tung",
+          "description": "This course introduces object-oriented programming using the Java programming language. Topics include classes, objects, inheritance, polymorphism, interfaces, and exception handling. The course will include a number of programming assignments and a term project.",
+          "image": "https://i.pinimg.com/originals/73/03/65/730365b155473d931c209f8c87ab4cab.jpg"
+        },
+        {
+          "name": "Principles of Database Management",
+          "code": "IT079IU",
+          "instructor": "Assoc. Prof. Nguyen Thi Thuy Loan",
+          "description": "This course covers the principles of database management systems. Topics include data models, relational databases, SQL, database design, normalization, transactions, and database programming. The course will include a number of programming assignments and a term project.",
+          "image": "https://cdn.corporatefinanceinstitute.com/assets/database.jpeg"
+        },
+        {
+          "name": "Artificial Intelligence",
+          "code": "IT159IU",
+          "instructor": "Dr.  Le Thanh Sach",
+          "description": "This course covers the principles and techniques of artificial intelligence. Topics include intelligent agents, uninformed and informed search, logical agents, constraint satisfaction problems, knowledge representation, planning, machine learning, and natural language processing. The course will include a number of programming assignments and a term project.",
+          "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_SS.width-1300.jpg"
+        }
+      ]
+    },
+    "Information Technology": {
+      "description": "Information Technology is the study of utilizing computers and software to manage information. Unlike computer science, IT deals mostly with the application of software and software systems; this includes their theory, design, development, and application.",
+      "code": "IT",
+      "courses": [
+        {
+          "name": "Computer Networks",
+          "code": "IT091IU",
+          "instructor": "Dr. Le Thanh Son",
+          "description": "This course covers the principles and techniques of computer networks. Topics include network architectures, network protocols, network programming, and network security. The course will include a number of programming assignments and a term project.",
+          "image": "https://www.usnews.com/dims4/USNEWS/d2b8404/2147483647/crop/2000x1313+0+0/resize/640x420/quality/85/?url=https%3A%2F%2Fwww.usnews.com%2Fcmsmedia%2F58%2Fbc%2F3ab48f23404688889b802115644c%2F180625-computernetworkarchitect-stock.jpg"
+        },
+        {
+          "name": "Information Systems Management",
+          "code": "IT019IU",
+          "instructor": "Dr. Ho Long Van",
+          "description": "This course covers the principles and techniques of information systems. Topics include information systems concepts, organizational and management foundations of information systems, and the use of information systems in organizations. The course will include a number of programming assignments and a term project.",
+          "image": "https://extension.harvard.edu/wp-content/uploads/sites/8/2020/10/information-management.jpg"
+        },
+        {
+          "name": "Net-Centric Programming",
+          "code": "IT096IU",
+          "instructor": "Dr. Le Thanh Son",
+          "description": "This course covers the principles and techniques of net-centric programming. Topics include web programming, web services, and cloud computing. The course will include a number of programming assignments and a term project.",
+          "image": "https://media.istockphoto.com/id/1322517295/vi/anh/k%E1%BB%B9-s%C6%B0-cntt-an-ninh-m%E1%BA%A1ng-l%C3%A0m-vi%E1%BB%87c-%C4%91%E1%BB%83-b%E1%BA%A3o-v%E1%BB%87-m%E1%BA%A1ng-ch%E1%BB%91ng-l%E1%BA%A1i-c%C3%A1c-cu%E1%BB%99c-t%E1%BA%A5n-c%C3%B4ng-m%E1%BA%A1ng-t%E1%BB%AB-tin-t%E1%BA%B7c.jpg?s=612x612&w=0&k=20&c=3QGoR4Nribl8QEO3Xu6LrapTr-WGJcjhWFl5ZSSFF4o="
+        },
+        {
+          "name": "Scalable and Distributed Systems",
+          "code": "IT139IU",
+          "instructor": "Dr. Mai Hoang Bao An",
+          "description": "This course covers the principles and techniques of scalable and distributed systems. Topics include distributed systems concepts, distributed systems architectures, distributed systems technologies, and distributed systems management. The course will include a number of programming assignments and a term project.",
+          "image": "https://t4.ftcdn.net/jpg/05/07/66/23/360_F_507662376_BTKmPlIGBvKlRHWKRNeFt7bj7H2SynQm.jpg"
+        },
+        {
+          "name": "Web Application Development",
+          "code": "IT140IU",
+          "instructor": "Dr. Nguyen Van Sinh",
+          "description": "This course covers the principles and techniques of web application development. Topics include web application architectures, web application technologies, web application programming, and web application security. The course will include a number of programming assignments and a term project.",
+          "image": "https://www.ionos.com/digitalguide/fileadmin/DigitalGuide/Teaser/webentwicklung-t.jpg"
+        }
+      ]
+    },
+    "Data Science": {
+      "description": "Data Science is the study of data. Data scientists analyze and interpret complex digital data, such as the usage statistics of a website, to assist a business in its decision-making.",
+      "code": "DS",
+      "courses": [
+        {
+          "name": "Data Mining",
+          "code": "IT160IU",
+          "instructor": "Dr. Assoc. Prof. Nguyen Thi Thuy Loan",
+          "description": "This course covers the principles and techniques of data mining. Topics include data preprocessing, data warehousing, data cube technology, data mining models, and data mining algorithms. The course will include a number of programming assignments and a term project.",
+          "image": "https://st4.depositphotos.com/3203307/21961/i/450/depositphotos_219619518-stock-photo-data-visualization-information-tracking-illustration.jpg"
+        },
+        {
+          "name": "Machine Learning Platforms",
+          "code": "IT098IU",
+          "instructor": "Dr. Mai Hoang Bao An",
+          "description": "This course covers the principles and techniques of machine learning. Topics include supervised learning, unsupervised learning, and reinforcement learning. The course will include a number of programming assignments and a term project.",
+          "image": "https://imageio.forbes.com/specials-images/dam/imageserve/966248982/960x0.jpg?height=456&width=711&fit=bounds"
+        },
+        {
+          "name": "Big Data Analytics",
+          "code": "IT099IU",
+          "instructor": "Dr. Assoc. Prof. Nguyen Thi Thuy Loan",
+          "description": "This course covers the principles and techniques of big data analytics. Topics include big data technologies, big data storage and processing, big data analysis, and big data visualization. The course will include a number of programming assignments and a term project.",
+          "image": "https://savvycom.vn/wp-content/uploads/2023/07/Cong-Nghe-Big-Data-1.webp"
+        },
+        {
+          "name": "Probability, Statistics, and Random Process",
+          "code": "MA026IU",
+          "instructor": "Dr. Pham Manh Ha",
+          "description": "This course covers the principles and techniques of probability, statistics, and random processes. Topics include probability theory, statistical inference, and random processes. The course will include a number of programming assignments and a term project.",
+          "image": "https://cdn.vietnambiz.vn/171464876016439296/2020/6/17/0ujbjitnesi6zevk-15923868703941909944937.jpg"
+        },
+        {
+          "name": "Theoretical Models in Computing",
+          "code": "IT131IU",
+          "instructor": "Dr. Ha Viet Uyen Synh",
+          "description": "This course covers the principles and techniques of theoretical models in computing. Topics include finite automata, regular languages, context-free languages, and Turing machines. The course will include a number of programming assignments and a term project.",
+          "image": "https://images.shiksha.com/mediadata/images/articles/1565170835phpupBzOx.jpeg"
+        }
+      ]
+    }
+  }
+}

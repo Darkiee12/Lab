@@ -111,36 +111,36 @@ public class RegistrationController {
   private void sendEmail(String name, String id, String email, String major, List<String> courses) {
     StringBuilder messageBuilder = new StringBuilder();
     messageBuilder.append("Thank you for registering!\n\n")
-    .append("Name: ").append(name).append("\n")
-    .append("ID: ").append(id).append("\n")
-   .append("Email: ").append(email).append("\n")
-    .append("Major: ").append(major).append("\n")
-    .append("Courses: ").append(String.join(", ", courses)).append("\n");
+        .append("Name: ").append(name).append("\n")
+        .append("ID: ").append(id).append("\n")
+        .append("Email: ").append(email).append("\n")
+        .append("Major: ").append(major).append("\n")
+        .append("Courses: ").append(String.join(", ", courses)).append("\n");
 
     try {
-        String host = "localhost";
-        String from = "lab3@localhost";
-        int port = 8080;
-        String to = email;
+      String host = "localhost";
+      String from = "lab3@localhost";
+      int port = 8080;
+      String to = email;
 
-        Properties properties = System.getProperties();
-        properties.setProperty("mail.smtp.host", host);
-        properties.setProperty("mail.smtp.port", String.valueOf(port));
+      Properties properties = System.getProperties();
+      properties.setProperty("mail.smtp.host", host);
+      properties.setProperty("mail.smtp.port", String.valueOf(port));
 
-        Session session = Session.getDefaultInstance(properties);
+      Session session = Session.getDefaultInstance(properties);
 
-        MimeMessage message = new MimeMessage(session);
-        message.setFrom(new InternetAddress(from));
-        message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
-        message.setSubject("Registration Confirmation");
-        message.setText(messageBuilder.toString());
+      MimeMessage message = new MimeMessage(session);
+      message.setFrom(new InternetAddress(from));
+      message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
+      message.setSubject("Registration Confirmation");
+      message.setText(messageBuilder.toString());
 
-        Transport.send(message);
-        System.out.println("Email sent successfully.");
+      Transport.send(message);
+      System.out.println("Email sent successfully.");
     } catch (MessagingException mex) {
-        mex.printStackTrace();
-        
+      mex.printStackTrace();
+
     }
-}
+  }
 
 }

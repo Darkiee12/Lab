@@ -1,2 +1,7 @@
 *.pdf
 .prettierrc
+*.zip
+*.rar
+*.tar.gz
+*.docx
+*.doc
