@@ -8,6 +8,7 @@ maven-metadata-*.xml
 maven-archiver/
 MANIFEST.MF
 
+
 # IntelliJ IDEA files
 .idea/
 *.iml
