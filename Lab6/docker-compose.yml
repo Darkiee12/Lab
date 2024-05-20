@@ -1,0 +1,42 @@
+services:
+  database:
+    image: mysql:8.4.0
+    container_name: database
+    environment:
+      MYSQL_DATABASE: university
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: 12345
+      MYSQL_ROOT_PASSWORD: 12345
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./database/sample.sql:/docker-entrypoint-initdb.d/sample.sql
+
+  server:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - database
+
+  app:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: frontend
+    working_dir: /home/bun/app
+    volumes:
+      - ./frontend:/home/bun/app
+      - /home/bun/app/node_modules
+    expose:
+      - "5173"
+    ports:
+      - "5173:5173"
+    restart: always
+    depends_on:
+      - server
+  

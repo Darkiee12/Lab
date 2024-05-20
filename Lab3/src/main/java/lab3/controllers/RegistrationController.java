@@ -68,8 +68,6 @@ public class RegistrationController {
   @GetMapping("/majors={majorCode}/courses={courseCode}")
   public void courses(@PathVariable String majorCode, @PathVariable String courseCode, HttpServletResponse response)
       throws IOException {
-    System.out.println("Requested course: " + courseCode);
-    System.out.println("Requested major: " + majorCode);
     Course course = programme.getMajorFromCode(majorCode).getCourseFromCode(courseCode);
     StringBuilder htmlBuilder = new StringBuilder();
     htmlBuilder.append("<div class='w-full h-full'>")
@@ -95,7 +93,11 @@ public class RegistrationController {
         .asList(request.getParameterValues("course"))
         .stream()
         .map(code -> {
-          return this.programme.getMajor(major).getCourseFromCode(code).getName();
+          return this
+            .programme
+            .getMajor(major)
+            .getCourseFromCode(code)
+            .getName();
         })
         .collect(Collectors.toList());
 

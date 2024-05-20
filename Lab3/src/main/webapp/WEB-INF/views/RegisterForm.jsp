@@ -52,24 +52,15 @@ import="lab3.models.Course"%>
             />
           </div>
           <div class="flex items-center w-full p-[10px] rounded-[5px]">
-            <label for="gender" class="mb-2 mr-4">Gender:</label>
-            <div class="flex items-center justify-between w-full">
-              <input
-                type="radio"
-                id="male"
-                name="gender"
-                class="mr-1"
-                required
-              />
-              <span class="font-[18px]">Male</span>
-              <input
-                type="radio"
-                id="female"
-                name="gender"
-                class="mr-1"
-                required
-              />
-              <span class="font-[18px]">Female</span>
+            <div class="w-full flex justify-around">
+              <div>
+                <input type="radio" id="male" name="gender" value="false" required>
+                <label for="male">Male</label>
+              </div>
+              <div>
+                <input type="radio" id="female" name="gender" value="true" required>
+                <label for="female">Female</label>
+              </div>
             </div>
           </div>
           <div class="flex flex-col w-full p-[10px] rounded-[5px]">

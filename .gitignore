@@ -5,3 +5,7 @@
 *.tar.gz
 *.docx
 *.doc
+*.ppt
+*.pptx
+*.xls
+*.xlsx

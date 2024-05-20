@@ -38,7 +38,7 @@
         <a href="${pageContext.request.contextPath}/personalinfo" class="block mt-4">
             <button class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                 Back
-            </button>d:\Lecture\Web Application Development\Lab\Lab2\form\index.html d:\Lecture\Web Application Development\Lab\Lab2\form\detail.json
+            </button>
         </a>
     </div>
   </div>
