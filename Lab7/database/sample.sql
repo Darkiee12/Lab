@@ -1,12 +1,12 @@
 INSERT INTO
-  `program` (
-    `id`,
-    `name`,
-    `duration`,
-    `version`,
-    `major_id`,
-    `program_type_id`,
-    `valid_from`
+  program (
+    id,
+    name,
+    duration,
+    version,
+    major_id,
+    program_type_id,
+    valid_from
   )
 VALUES
   (1, 'DS_2019_20', 4, '2019', 4, 1, NULL),
@@ -61,14 +61,14 @@ VALUES
   (61, 'WE(4:0)_2021', 4, '2021', 2, 3, NULL);
   
 INSERT INTO
-  `course` (
-    `id`,
-    `course_level_id`,
-    `name`,
-    `name_vn`,
-    `credit_theory`,
-    `credit_lab`,
-    `description`
+  course (
+    id,
+    course_level_id,
+    name,
+    name_vn,
+    credit_theory,
+    credit_lab,
+    description
   )
 VALUES
   (
@@ -78,7 +78,7 @@ VALUES
     'Hoá học cho kĩ sư',
     3,
     0,
-    'This one-semester course is designed for engineering students those who are pursuing a non-chemistry engineering degree such as information technology, bio‐technology, civil, biomedical, electronic and telecommunication engineering. The course will introduce the basic principles of chemistry and connect those principles to issues in engineering professions. The related lab‐work is not included in this course.'
+    'This one‐semester course is designed for engineering students those who are pursuing a non‐ chemistry engineering degree such as information technology, bio‐technology, civil, biomedical, electronic and telecommunication engineering. The course will introduce the basic principles of chemistry and connect those principles to issues in engineering professions. The related lab‐work is not included in this course.'
   ),
   (
     'CH012',
@@ -1739,11 +1739,11 @@ VALUES
   );
 
 INSERT INTO
-  `course_program` (
-    `course_id`,
-    `program_id`,
-    `course_code`,
-    `course_type_id`
+  course_program (
+    course_id,
+    program_id,
+    course_code,
+    course_type_id
   )
 VALUES
   ('CH011', 1, 'CH011IU', 1),

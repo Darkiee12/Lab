@@ -5,7 +5,6 @@ import Program from "../models/Program";
 import CoureService from "../service/CoureService";
 import ProgramService from "../service/ProgramService";
 import CourseProgramService from "../service/CourseProgramService";
-import placeholder from "../../../assets/placeholder.svg";
 
 const CoursePage: React.FC = () => {
   const [courses, setCourses] = useState<Course[]>([]);
@@ -34,59 +33,59 @@ const CoursePage: React.FC = () => {
         setError(true);
       });
   }, []);
-  const CourseElement: React.FC<{
-    course: Course;
-    style: React.CSSProperties;
-  }> = ({ course, style }) => {
+  const CourseElement: React.FC<{ course: Course }> = ({ course }) => {
     const [translate, setTranslate] = useState<boolean>(false);
     return (
-      <div className="w-full flex mb-3" style={style}>
-        <div className="w-1/5 p-2">
-          <img src={placeholder} alt="placeholder" className="w-full" />
-        </div>
-        <div className="w-4/5 p-2">
-          <p className="text-left font-bold text-2xl">
-            {translate ? course.nameVn : course.name}
-            <button
-              className="text-sm pl-2 material-symbols-outlined"
-              style={{ color: translate ? "#3b82f6" : "#808080" }}
-              onClick={() => setTranslate(!translate)}
-            >
-              translate
-            </button>
-          </p>
-          <div className="flex justify-between">
-            <div className="w-1/4 text-center">
-              <p>ID</p>
-              <p>{course.id}</p>
-            </div>
-            <div className="w-1/4 text-center">
-              <p>Level</p>
-              <p>{course.courseLevelId}</p>
-            </div>
-            <div className="w-1/4 text-center">
-              <div className="material-symbols-outlined">menu_book</div>
-              <div>{course.creditTheory}</div>
-            </div>
-            <div className="w-1/4 text-center">
-              <div className="material-symbols-outlined">computer</div>
-              <div>{course.creditTheory}</div>
-            </div>
+      <div className="basis-[49%] mb-3">
+        <p className="font-bold">
+          {translate ? course.nameVn : course.name}
+          <button
+            className="text-sm pl-2 material-symbols-outlined"
+            style={{ color: translate ? "#3b82f6" : "#808080" }}
+            onClick={() => setTranslate(!translate)}
+          >
+            translate
+          </button>
+        </p>
+        <div className="flex justify-between">
+          <div className="w-1/4">
+            <p>ID</p>
+            <p>{course.id}</p>
           </div>
-          {course.description.length > 0 ? (
-            <p>{course.description}</p>
-          ) : (
-            <div className="italic">No description for this course :(</div>
-          )}
-          {isAdvanceToggled ? (
-            <div className="w-full flex justify-around">
-              <EditCourseButton course={course} />
-              <DeleteCourseButton course={course} />
-            </div>
-          ) : (
-            <></>
-          )}
+          <div className="w-1/4">
+            <p>Level</p>
+            <p>{course.courseLevelId}</p>
+          </div>
+          <div className="w-1/4">
+            <div className="material-symbols-outlined">menu_book</div>
+            <div>{course.creditTheory}</div>
+          </div>
+          <div className="w-1/4">
+            <div className="material-symbols-outlined">computer</div>
+            <div>{course.creditTheory}</div>
+          </div>
         </div>
+        {course.description.length > 0 ? (
+          <div
+            className={
+              isAdvanceToggled
+                ? "text-left line-clamp-none"
+                : "text-left line-clamp-3"
+            }
+          >
+            {course.description}
+          </div>
+        ) : (
+          <div className="italic">No description for this course :(</div>
+        )}
+        {isAdvanceToggled ? (
+          <div className="w-full flex justify-around">
+            <EditCourseButton course={course} />
+            <DeleteCourseButton course={course} />
+          </div>
+        ) : (
+          <></>
+        )}
       </div>
     );
   };
@@ -97,15 +96,9 @@ const CoursePage: React.FC = () => {
         Press tab to toggle between simple and advanced mode for each course.
       </p>
       {!error ? (
-        <div className="w-full justify-center">
-          {courses.map((course, index) => (
-            <CourseElement
-              key={course.id}
-              course={course}
-              style={{
-                backgroundColor: index % 2 === 0 ? "#ffffff" : "#f2f2f2",
-              }}
-            />
+        <div className="w-full flex flex-wrap gap-5 justify-center">
+          {courses.map((course) => (
+            <CourseElement key={course.id} course={course} />
           ))}
           <div className="w-full">
             <AddCourseButton />
@@ -584,6 +577,8 @@ const AddCourseButton: React.FC = () => {
                 </div>
               </div>
             </div>
+
+
           </form>
         </div>
       )}

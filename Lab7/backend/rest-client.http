@@ -1,0 +1,41 @@
+### Home
+GET http://localhost:3000
+
+### Get all programs
+GET http://localhost:3000/apiprograms
+
+### Get a program by id
+GET http://localhost:3000/apiprograms/1
+
+### Create a program
+POST http://localhost:3000/apiprograms
+Content-Type: application/json
+{
+  "name": "Program 1",
+  "duration": 30,
+  "version": "1v1",
+  "majorId": 1,
+  "programTypeId": 1,
+  "validFrom": "2021-01-01"
+}
+### Update a program
+PUT http://localhost:3000/apiprograms/1
+
+### Delete a program
+DELETE http://localhost:3000/apiprograms/1
+
+### Get all courses
+GET http://localhost:3000/api/courses
+
+### Get a course by id
+GET http://localhost:3000/apicourses/1
+
+### Create a course
+POST http://localhost:3000/apicourses HTTP/1.1 Content-Type: application/json 
+
+
+### Update a course
+PUT http://localhost:3000/apicourses/1
+
+### Delete a course
+DELETE http://localhost:3000/apicourses/1

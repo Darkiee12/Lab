@@ -11,8 +11,13 @@ import lombok.Setter;
 @Table(name = "course_program")
 @IdClass(CourseProgramId.class)
 public class CourseProgram {
-    @EmbeddedId
-    private CourseProgramId id;
+    @Id
+    @Column(name = "course_id", nullable = false, length = 255)
+    private String courseId;
+
+    @Id
+    @Column(name = "program_id", nullable = false)
+    private Integer programId;
 
     @Column(name = "course_code", nullable = false, length = 255)
     private String courseCode;

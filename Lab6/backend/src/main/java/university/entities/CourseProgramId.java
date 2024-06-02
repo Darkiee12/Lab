@@ -1,13 +1,12 @@
 package university.entities;
 import java.io.Serializable;
 import jakarta.persistence.Column;
-import jakarta.persistence.Embeddable;
-import jakarta.persistence.IdClass;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
-@Embeddable
-@IdClass(CourseProgramId.class)
+
+@Getter
+@Setter
 public class CourseProgramId implements Serializable {
     @Column(name = "course_id", nullable = false, length = 255)
     private String courseId;
