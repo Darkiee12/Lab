@@ -1,0 +1,1110 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Your API Title",
+        "description": "Your API Description",
+        "contact": {
+            "email": "your.email@example.com"
+        },
+        "license": {
+            "name": "MIT License",
+            "url": "https://opensource.org/licenses/MIT"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/courses": {
+            "get": {
+                "tags": [
+                    "Courses"
+                ],
+                "summary": "Get list of courses",
+                "description": "Returns list of courses",
+                "operationId": "getCourseList",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Course"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Courses"
+                ],
+                "summary": "Create a new course",
+                "description": "Create a new course record",
+                "operationId": "createCourse",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Course"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Course"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/courses/create": {
+            "post": {
+                "tags": [
+                    "Courses"
+                ],
+                "summary": "Show course creation form",
+                "description": "Display the form for creating a new course",
+                "operationId": "createCourseForm",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Course"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/courses/{course}": {
+            "get": {
+                "tags": [
+                    "Courses"
+                ],
+                "summary": "Get a course by ID",
+                "description": "Returns a single course",
+                "operationId": "getCourseById",
+                "parameters": [
+                    {
+                        "name": "course",
+                        "in": "path",
+                        "description": "ID of the course",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "": {
+                                            "$ref": "#/components/schemas/Course"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Course not found"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Courses"
+                ],
+                "summary": "Update an existing course",
+                "description": "Update an existing course record",
+                "operationId": "updateCourse",
+                "parameters": [
+                    {
+                        "name": "course",
+                        "in": "path",
+                        "description": "ID of the course to update",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Course"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Course"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Course not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Courses"
+                ],
+                "summary": "Delete a course",
+                "description": "Deletes a single course",
+                "operationId": "deleteCourse",
+                "parameters": [
+                    {
+                        "name": "course",
+                        "in": "path",
+                        "description": "ID of the course to delete",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Course deleted successfully"
+                    },
+                    "404": {
+                        "description": "Course not found"
+                    }
+                }
+            }
+        },
+        "/api/courses/{course}/edit": {
+            "get": {
+                "tags": [
+                    "Courses"
+                ],
+                "summary": "Show course edit form",
+                "description": "Display the form for editing an existing course",
+                "operationId": "editCourseForm",
+                "parameters": [
+                    {
+                        "name": "course",
+                        "in": "path",
+                        "description": "ID of the course to edit",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Course"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Course not found"
+                    }
+                }
+            }
+        },
+        "/course_programs": {
+            "get": {
+                "tags": [
+                    "CoursePrograms"
+                ],
+                "summary": "Get list of course programs",
+                "description": "Returns list of course programs",
+                "operationId": "601e0233231d5fb30bf61db78a03b695",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/CourseProgram"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "CoursePrograms"
+                ],
+                "summary": "Create a new course program",
+                "operationId": "storeCourseProgram",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "course_id": {
+                                        "description": "ID of the course",
+                                        "type": "string"
+                                    },
+                                    "program_id": {
+                                        "description": "ID of the program",
+                                        "type": "integer"
+                                    },
+                                    "course_code": {
+                                        "description": "Code of the course",
+                                        "type": "string"
+                                    },
+                                    "course_type_id": {
+                                        "description": "Type ID of the course",
+                                        "type": "integer"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Course program created successfully",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CourseProgram"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Invalid input"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/course_programs/create": {
+            "get": {
+                "tags": [
+                    "CoursePrograms"
+                ],
+                "summary": "Show form to create a new course program",
+                "description": "Returns a form to create a new course program",
+                "operationId": "c641798e2a249a2b6e09087227a09230",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                },
+                                "example": {
+                                    "form_action": "/course_programs",
+                                    "method": "POST",
+                                    "fields": {
+                                        "course_id": "string",
+                                        "program_id": "integer",
+                                        "course_code": "string",
+                                        "course_type_id": "integer"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/course_programs/{course_program}": {
+            "get": {
+                "tags": [
+                    "CoursePrograms"
+                ],
+                "summary": "Get a course program by ID",
+                "description": "Returns a single course program",
+                "operationId": "getCourseProgramById",
+                "parameters": [
+                    {
+                        "name": "course_program",
+                        "in": "path",
+                        "description": "ID of the course program to retrieve",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CourseProgram"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Course program not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Course program not found"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "CoursePrograms"
+                ],
+                "summary": "Update a course program by ID",
+                "description": "Updates the details of a specific course program",
+                "operationId": "updateCourseProgramById",
+                "parameters": [
+                    {
+                        "name": "course_program",
+                        "in": "path",
+                        "description": "ID of the course program to update",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "course_code": {
+                                        "description": "Code of the course",
+                                        "type": "string"
+                                    },
+                                    "course_type_id": {
+                                        "description": "Type ID of the course",
+                                        "type": "integer"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CourseProgram"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Invalid input"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Course program not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Course program not found"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "CoursePrograms"
+                ],
+                "summary": "Delete a course program by ID",
+                "description": "Deletes a specific course program",
+                "operationId": "deleteCourseProgramById",
+                "parameters": [
+                    {
+                        "name": "course_program",
+                        "in": "path",
+                        "description": "ID of the course program to delete",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Course program deleted successfully"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Course program not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Course program not found"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/course_programs/{course_program}/edit": {
+            "get": {
+                "tags": [
+                    "CoursePrograms"
+                ],
+                "summary": "Edit a course program by ID",
+                "description": "Returns the data of a single course program for editing",
+                "operationId": "editCourseProgramById",
+                "parameters": [
+                    {
+                        "name": "course_program",
+                        "in": "path",
+                        "description": "ID of the course program to edit",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CourseProgram"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Course program not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Course program not found"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/programs": {
+            "get": {
+                "tags": [
+                    "Programs"
+                ],
+                "summary": "Get list of programs",
+                "description": "Returns a list of programs",
+                "operationId": "c3bb77153f2117d65a80a27eb16cbce1",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Program"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Programs"
+                ],
+                "summary": "Create a new program",
+                "operationId": "storeProgram",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "description": "Name of the program",
+                                        "type": "string"
+                                    },
+                                    "duration": {
+                                        "description": "Duration of the program",
+                                        "type": "integer"
+                                    },
+                                    "version": {
+                                        "description": "Version of the program",
+                                        "type": "string",
+                                        "maxLength": 4
+                                    },
+                                    "major_id": {
+                                        "description": "ID of the major",
+                                        "type": "integer"
+                                    },
+                                    "program_type_id": {
+                                        "description": "Type ID of the program",
+                                        "type": "integer"
+                                    },
+                                    "valid_from": {
+                                        "description": "Valid from date",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Program created successfully",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Program"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Invalid input"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/programs/create": {
+            "get": {
+                "tags": [
+                    "Programs"
+                ],
+                "summary": "Show form to create a new program",
+                "description": "Returns a form to create a new program",
+                "operationId": "3a5d1ed5b603bc22a5f89614f20295a5",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                },
+                                "example": {
+                                    "form_action": "/programs",
+                                    "method": "POST",
+                                    "fields": {
+                                        "name": "string",
+                                        "duration": "integer",
+                                        "version": "string",
+                                        "major_id": "integer",
+                                        "program_type_id": "integer",
+                                        "valid_from": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/programs/{program}": {
+            "get": {
+                "tags": [
+                    "Programs"
+                ],
+                "summary": "Get a program by ID",
+                "description": "Returns a single program",
+                "operationId": "getProgramById",
+                "parameters": [
+                    {
+                        "name": "program",
+                        "in": "path",
+                        "description": "ID of the program to retrieve",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Program"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Program not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Program not found"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Programs"
+                ],
+                "summary": "Update a program by ID",
+                "description": "Updates the details of a specific program",
+                "operationId": "updateProgramById",
+                "parameters": [
+                    {
+                        "name": "program",
+                        "in": "path",
+                        "description": "ID of the program to update",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "description": "Name of the program",
+                                        "type": "string"
+                                    },
+                                    "duration": {
+                                        "description": "Duration of the program",
+                                        "type": "integer"
+                                    },
+                                    "version": {
+                                        "description": "Version of the program",
+                                        "type": "string",
+                                        "maxLength": 4
+                                    },
+                                    "major_id": {
+                                        "description": "ID of the major",
+                                        "type": "integer"
+                                    },
+                                    "program_type_id": {
+                                        "description": "Type ID of the program",
+                                        "type": "integer"
+                                    },
+                                    "valid_from": {
+                                        "description": "Valid from date",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Program"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Invalid input"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Program not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Program not found"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Programs"
+                ],
+                "summary": "Delete a program by ID",
+                "description": "Deletes a specific program",
+                "operationId": "deleteProgramById",
+                "parameters": [
+                    {
+                        "name": "program",
+                        "in": "path",
+                        "description": "ID of the program to delete",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Program deleted successfully"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Program not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Program not found"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/programs/{program}/edit": {
+            "get": {
+                "tags": [
+                    "Programs"
+                ],
+                "summary": "Edit a program by ID",
+                "description": "Returns the data of a single program for editing",
+                "operationId": "editProgramById",
+                "parameters": [
+                    {
+                        "name": "program",
+                        "in": "path",
+                        "description": "ID of the program to edit",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Program"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Program not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Program not found"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Course": {
+                "title": "Course",
+                "description": "Course model schema",
+                "required": [
+                    "id",
+                    "course_level_id",
+                    "name",
+                    "credit_theory",
+                    "credit_lab"
+                ],
+                "properties": {
+                    "id": {
+                        "description": "Course ID",
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "course_level_id": {
+                        "description": "ID of the course level",
+                        "type": "integer",
+                        "example": 2
+                    },
+                    "name": {
+                        "description": "Name of the course",
+                        "type": "string",
+                        "example": "Introduction to Programming"
+                    },
+                    "name_vn": {
+                        "description": "Name of the course in Vietnamese",
+                        "type": "string",
+                        "example": "Giới thiệu về lập trình"
+                    },
+                    "credit_theory": {
+                        "description": "Number of theoretical credits",
+                        "type": "integer",
+                        "example": 3
+                    },
+                    "credit_lab": {
+                        "description": "Number of laboratory credits",
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "description": {
+                        "description": "Description of the course",
+                        "type": "string",
+                        "example": "This course covers basic concepts of programming including algorithms, data structures, and software engineering principles."
+                    }
+                },
+                "type": "object"
+            },
+            "CourseProgram": {
+                "title": "CourseProgram",
+                "description": "CourseProgram model schema",
+                "required": [
+                    "course_id",
+                    "program_id",
+                    "course_code",
+                    "course_type_id"
+                ],
+                "properties": {
+                    "course_id": {
+                        "description": "ID of the course",
+                        "type": "string",
+                        "example": "1"
+                    },
+                    "program_id": {
+                        "description": "ID of the program",
+                        "type": "string",
+                        "example": "1"
+                    },
+                    "course_code": {
+                        "description": "Code of the course",
+                        "type": "string",
+                        "example": "CS101"
+                    },
+                    "course_type_id": {
+                        "description": "ID of the course type",
+                        "type": "integer",
+                        "example": 1
+                    }
+                },
+                "type": "object"
+            },
+            "Program": {
+                "title": "Program",
+                "description": "Program model schema",
+                "required": [
+                    "name",
+                    "program_type_id"
+                ],
+                "properties": {
+                    "name": {
+                        "description": "Name of the program",
+                        "type": "string",
+                        "example": "Computer Science"
+                    },
+                    "duration": {
+                        "description": "Duration of the program in years",
+                        "type": "integer",
+                        "example": 4
+                    },
+                    "version": {
+                        "description": "Version of the program",
+                        "type": "string",
+                        "example": "1.0"
+                    },
+                    "major_id": {
+                        "description": "ID of the major associated with the program",
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "program_type_id": {
+                        "description": "ID of the program type",
+                        "type": "integer",
+                        "example": 2
+                    },
+                    "valid_from": {
+                        "description": "Date from which the program is valid",
+                        "type": "string",
+                        "format": "date",
+                        "example": "2022-01-01"
+                    }
+                },
+                "type": "object"
+            }
+        }
+    }
+}

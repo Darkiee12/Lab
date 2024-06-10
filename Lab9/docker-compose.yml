@@ -1,0 +1,80 @@
+networks:
+  laravel:
+  
+services:
+  database:
+    image: mysql:latest
+    container_name: database
+    environment:
+      MYSQL_DATABASE: university
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: 12345
+      MYSQL_ROOT_PASSWORD: 12345
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./database/sample.sql:/docker-entrypoint-initdb.d/sample.sql
+    networks:
+    - laravel
+
+  server:
+    build:
+      context: ./backend/docker
+      dockerfile: nginx.dockerfile
+      args:
+        - UID=${UID:-1000}
+        - GID=${GID:-1000}
+    ports:
+      - "80:80"
+    volumes:
+      - ./backend/src:/var/www/html:delegated
+    depends_on:
+      - php
+      - database
+    networks:
+      - laravel
+
+  php:
+    build:
+      context: ./backend/docker
+      dockerfile: php.dockerfile
+      args:
+        - UID=${UID:-1000}
+        - GID=${GID:-1000}
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./backend/src:/var/www/html:delegated
+    networks:
+      - laravel
+
+  composer:
+    build:
+      context: ./backend/docker
+      dockerfile: php.dockerfile
+      args:
+        - UID=${UID:-1000}
+        - GID=${GID:-1000}
+    volumes:
+      - ./backend/src:/var/www/html
+    depends_on:
+      - php
+    entrypoint: [ 'composer', '--ignore-platform-reqs' ]
+    networks:
+      - laravel
+
+  artisan:
+    build:
+      context: ./backend/docker
+      dockerfile: php.dockerfile
+      args:
+        - UID=${UID:-1000}
+        - GID=${GID:-1000}
+    volumes:
+      - ./backend/src:/var/www/html:delegated
+    depends_on:
+      - database
+    entrypoint: [ 'php', '/var/www/html/artisan' ]
+    networks:
+      - laravel
