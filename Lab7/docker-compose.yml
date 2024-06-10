@@ -1,17 +1,4 @@
 services:
-  # database:
-  #   image: postgres:16.3-alpine3.20
-  #   container_name: database
-  #   environment:
-  #     POSTGRES_DB: university
-  #     POSTGRES_USER: admin
-  #     POSTGRES_PASSWORD: 12345
-      
-  #   ports:
-  #     - "5432:5432"
-  #   volumes:
-  #     - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
-  #     - ./database/sample.sql:/docker-entrypoint-initdb.d/sample.sql
   database:
     image: mysql:latest
     container_name: database
@@ -26,16 +13,15 @@ services:
       - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
       - ./database/sample.sql:/docker-entrypoint-initdb.d/sample.sql
 
-  server:
-    restart: always
-    build:
-      context: ./backend
-      dockerfile: Dockerfile
-    container_name: backend
-    ports:
-      - "3000:3000"
-    depends_on:
-      - database
+  # server:
+  #   build:
+  #     context: ./backend
+  #     dockerfile: Dockerfile
+  #   container_name: backend
+  #   ports:
+  #     - "3000:3000"
+  #   # depends_on:
+  #   #   - database
 
   app:
     build:

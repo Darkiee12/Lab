@@ -2,7 +2,7 @@ import { Entity, Column, PrimaryColumn, OneToMany } from 'typeorm';
 import { CourseProgram } from '../courses-programs/course-program.entity';
 import { ApiProperty } from '@nestjs/swagger';
 
-@Entity()
+@Entity("course")
 export class Course {
   @PrimaryColumn({ type: 'varchar', length: 255 })
   @ApiProperty({

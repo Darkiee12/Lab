@@ -1,9 +1,7 @@
 import {
   Entity,
-  PrimaryGeneratedColumn,
   Column,
   ManyToOne,
-  JoinColumn,
   Index,
   Unique,
   PrimaryColumn
@@ -14,7 +12,6 @@ import { Program } from '../programs/program.entity';
 @Entity('course_program')
 @Unique('Key', ['courseId', 'programId'])
 @Index('FK_CourseProgram_Program', ['programId'])
-@Entity()
 export class CourseProgram {
   @PrimaryColumn({ type: 'varchar', length: 255, name: 'course_id'})
   courseId: string;
@@ -29,8 +26,8 @@ export class CourseProgram {
   courseTypeId: number;
 
   @ManyToOne(() => Course, (course) => course.coursePrograms, { onDelete: 'CASCADE', onUpdate: 'CASCADE' })
-  course: Course;
+  course: Course = null;
 
   @ManyToOne(() => Program, (program) => program.coursePrograms, { onDelete: 'CASCADE', onUpdate: 'CASCADE' })
-  program: Program;
+  program: Program = null;
 }

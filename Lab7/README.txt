@@ -23,8 +23,8 @@ Make sure you have the following installed:
 
 2. Access the services:
 
-   - Your backend service will be available at [http://localhost:8080](http://localhost:8080)
-   - Including Swagger to test the API at [here](http://localhost:8080/swagger-ui/index.html#/)
+   - Your backend service will be available at [http://localhost:3000](http://localhost:3000)
+   - Including Swagger to test the API at [here](http://localhost:3000/docs/)
    - Your database service will be available at [mysql://localhost:3306](mysql://localhost:3306)
    - Your frontend service will be available at [http://localhost:5173](http://localhost:5173)
 

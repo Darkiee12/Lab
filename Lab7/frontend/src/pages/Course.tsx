@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Course from "../models/Course";
 import CourseProgram from "../models/CourseProgram";
 import Program from "../models/Program";
-import CoureService from "../service/CoureService";
+import CourseService from "../service/CourseService";
 import ProgramService from "../service/ProgramService";
 import CourseProgramService from "../service/CourseProgramService";
 
@@ -10,6 +10,7 @@ const CoursePage: React.FC = () => {
   const [courses, setCourses] = useState<Course[]>([]);
   const [isAdvanceToggled, setisAdvanceToggled] = useState(false);
   const [error, setError] = useState<boolean>(false);
+  const [page, setPage] = useState<number>(1);
 
   useEffect(() => {
     const handleKeyDown = (event: any) => {
@@ -24,7 +25,7 @@ const CoursePage: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    CoureService.get()
+    CourseService.get()
       .then((c) => {
         setCourses(c);
       })
@@ -33,6 +34,28 @@ const CoursePage: React.FC = () => {
         setError(true);
       });
   }, []);
+  const loadMoreCourse = () => {
+    setPage(page + 1)
+    CourseService
+      .get(page, 20)
+      .then((c) => {
+        setCourses([...courses, ...c]);
+      })
+      .catch((err) => {
+        console.error(err);
+        setError(true);
+      });
+  }
+  const LoadMoreCourseComponent: React.FC = () => {
+    return(
+      <button
+          className="w-full bg-blue-500 text-white font-bold p-2 rounded-md shadow-md hover:bg-blue-600 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-white"
+          onClick={() => loadMoreCourse()}
+        >
+          Load more courses!
+        </button>
+    )
+  }
   const CourseElement: React.FC<{ course: Course }> = ({ course }) => {
     const [translate, setTranslate] = useState<boolean>(false);
     return (
@@ -101,6 +124,9 @@ const CoursePage: React.FC = () => {
             <CourseElement key={course.id} course={course} />
           ))}
           <div className="w-full">
+            <LoadMoreCourseComponent />
+          </div>
+          <div className="w-full">
             <AddCourseButton />
           </div>
         </div>
@@ -117,7 +143,7 @@ const EditCourseButton: React.FC<{ course: Course }> = ({ course }) => {
   const [showModal, setShowModal] = useState(false);
   const editCourse = () => {
     alert("Updating course...");
-    CoureService.update(newCourse)
+    CourseService.update(newCourse)
       .then(() => {
         alert("Course updated successfully!");
         window.location.reload();
@@ -292,7 +318,7 @@ const EditCourseButton: React.FC<{ course: Course }> = ({ course }) => {
 };
 const DeleteCourseButton: React.FC<{ course: Course }> = ({ course }) => {
   const deleteCourse = () => {
-    CoureService.remove(course.id)
+    CourseService.remove(course.id)
       .then(() => {
         alert("Course deleted successfully!");
         window.location.reload();
@@ -335,7 +361,7 @@ const AddCourseButton: React.FC = () => {
   });
   const [showModal, setShowModal] = useState(false);
   const addCourse = () => {
-    CoureService.post(course!)
+    CourseService.post(course!)
       .then(() => {
         alert("Course added successfully!");
       })
@@ -585,4 +611,6 @@ const AddCourseButton: React.FC = () => {
     </div>
   );
 };
+
+
 export default CoursePage;
